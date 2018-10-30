@@ -8,9 +8,9 @@
 		<link rel = "stylesheet" type = "text/css"  href = "login.css" />
 	</head>
 	<body id="LoginForm">
-   		<div class="col-md-6 offset-md-3">
-            <div class="card card-outline-secondary">
-            	<div class="card-body">
+   		<div class="container">
+            <div class="login-form">
+            	<div class="main-div">
                 	<h3 class="text-center">Credit Card Payment</h3>
                     <hr>
                     
@@ -60,7 +60,7 @@
                         <div class="form-inline">
                         	<div class="input-group">
                             	<div class="input-group-prepend"><span class="input-group-text">$</span></div>
-                                <input type="text" class="form-control text-right" id="exampleInputAmount" placeholder="39">
+                                <input type="text" class="form-control text-right" id="exampleInputAmount" placeholder="00">
                                 <div class="input-group-append"><span class="input-group-text">.00</span></div>
                             </div>
                         </div>
@@ -70,8 +70,7 @@
                             	<button type="reset" class="btn btn-primary">Cancel</button>
                             </div>
                             <div class="col-md-6">
-                            	<button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
+                            	<button type="submit" class="btn btn-primary">Submit</buttonbtn btn-primary                </div>
                         </div>
                 	</form>
               	</div>

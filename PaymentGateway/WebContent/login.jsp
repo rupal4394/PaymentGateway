@@ -17,15 +17,25 @@
    					</div>
     				<form id="Login">
 						<div class="form-group">
-							<input type="email" class="form-control" id="inputEmail" placeholder="Email Address">
+							<label for="email">Email Address</label>
+							<input type="email" class="form-control" id="inputEmail" >
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-control" id="inputPassword" placeholder="Password">
+							<label for="password">Password</label>
+							<input type="password" class="form-control" id="inputPassword" placeholder="">
 						</div>
         				<div class="forgot">
         					<a href="reset.html">Forgot password?</a>
 						</div>
-        				<button type="submit" class="btn btn-primary">Login</button>
+						<div class="form-group row" >
+                        	<div class="col-md-6">
+                            	<button type="reset" class="btn btn-primary">Cancel</button>
+                            </div>
+                            <div class="col-md-6">
+                            	<button type="submit" class="btn btn-primary">Login</button>
+                            </div>
+                        </div>
+        				
 					</form>
     			</div>
 			</div>
