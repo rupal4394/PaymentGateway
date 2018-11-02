@@ -1,3 +1,4 @@
+package com.paymentgateway.model;
 import java.util.*;
 public class CardDetails {
 
@@ -5,6 +6,8 @@ public class CardDetails {
 	private long cardNumber;
 	private Date expiry_date;
 	private int cvv;
+	private float balance;
+	
 	public int getCard_id() {
 		return card_id;
 	}
@@ -28,6 +31,17 @@ public class CardDetails {
 	}
 	public void setCvv(int cvv) {
 		this.cvv = cvv;
+	}
+	public float getBalance() {
+		return balance;
+	}
+	public void setBalance(float balance) {
+		this.balance = balance;
+	}
+	@Override
+	public String toString() {
+		return "CardDetails [card_id=" + card_id + ", cardNumber=" + cardNumber + ", expiry_date=" + expiry_date
+				+ ", cvv=" + cvv + ", balance=" + balance + "]";
 	}
 	
 	

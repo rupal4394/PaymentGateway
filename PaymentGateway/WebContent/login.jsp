@@ -14,28 +14,29 @@
 				<div class="main-div">
     				<div class="panel">
    						<p>Please enter your email and password</p>
+   					
    					</div>
-    				<form id="Login">
+    				<form action="login" method="post">
 						<div class="form-group">
-							<label for="email">Email Address</label>
-							<input type="email" class="form-control" id="inputEmail" >
+							<label for="userName">Username</label>
+							<input type="text" name="userName" class="form-control" id="inputEmail" >
 						</div>
 						<div class="form-group">
 							<label for="password">Password</label>
-							<input type="password" class="form-control" id="inputPassword" placeholder="">
+							<input type="password" name="password" class="form-control" id="inputPassword" placeholder="">
 						</div>
         				<div class="forgot">
         					<a href="reset.html">Forgot password?</a>
 						</div>
 						<div class="form-group row" >
                         	<div class="col-md-6">
-                            	<button type="reset" class="btn btn-primary">Cancel</button>
+                            	<button type="reset" name="action" value="reset" class="btn btn-primary">Cancel</button>
                             </div>
                             <div class="col-md-6">
-                            	<button type="submit" class="btn btn-primary">Login</button>
+                            	<button type="submit" name="action" value="submit" class="btn btn-primary">Login</button>
                             </div>
                         </div>
-        				
+        					
 					</form>
     			</div>
 			</div>
