@@ -25,9 +25,10 @@
 							<label for="password">Password</label>
 							<input type="password" name="password" class="form-control" id="inputPassword" placeholder="">
 						</div>
-        				<div class="forgot">
+   <!--       				<div class="forgot">
         					<a href="reset.html">Forgot password?</a>
 						</div>
+	--><br>
 						<div class="form-group row" >
                         	<div class="col-md-6">
                             	<button type="reset" name="action" value="reset" class="btn btn-primary">Cancel</button>

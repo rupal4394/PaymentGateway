@@ -1,4 +1,6 @@
 package com.payment;
+import com.paymentgateway.model.RSA;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -26,6 +28,10 @@ public class LoginController extends HttpServlet {
 			{
 				HttpSession session = request.getSession(true);	    
 				session.setAttribute("currentSessionUser",user); 
+				
+				RSA.generateKeyPair();
+				session.setAttribute("publicKey", RSA.getPubKey());			
+				
 				response.sendRedirect("payment.jsp");     		
 			}
 			else {

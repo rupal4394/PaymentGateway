@@ -1,7 +1,5 @@
+<%@ page import="com.paymentgateway.model.RSA" %>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<!------ Include the above in your HEAD tag ---------->
 
 <html>
 	<head>
@@ -14,14 +12,14 @@
                 	<h3 class="text-center">Credit Card Payment</h3>
                     <hr>
                     
-                    <form class="login-form" action="payment" method="post" role="form" autocomplete="off">
+                    <form  action="processing.jsp" method="post" id="paymentForm">
                     	<div class="form-group">
                         	<label for="cc_name">Card Holder's Name</label>
-                            <input type="text" class="form-control" name="cc_name" pattern="\w+ \w+.*" title="First and last name" required="required">
+                            <input type="text" class="form-control" name="cc_name" >
                    		</div>
                         <div class="form-group">
                         	<label>Card Number</label>
-                            <input type="text" class="form-control" name="cc_no" autocomplete="off" maxlength="20" pattern="\d{16}" title="Credit card number" required="">
+                            <input type="text" class="form-control" name="cc_no" autocomplete="off" title="Credit card number" >
                         </div>
                         <div class="form-group row">
                         	<label class="col-md-12">Card Exp. Date</label>
@@ -51,7 +49,7 @@
                                	</select>
                            	</div>
                             <div class="col-md-4">
-                            	<input type="text" class="form-control" name="cvv" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card" required="" placeholder="CVC">
+                            	<input type="text" class="form-control" name="cvv" autocomplete="off" maxlength="3" pattern="\d{3}" title="Three digits at back of your card"  placeholder="CVC">
                        	    </div>
                     	</div>
                         <div class="row">
@@ -60,10 +58,12 @@
                         <div class="form-inline">
                         	<div class="input-group">
                             	<div class="input-group-prepend"><span class="input-group-text">$</span></div>
-                                <input type="text" name="amount" class="form-control text-right" id="exampleInputAmount" placeholder="00">
+                                <input type="text" name="amount" class="form-control text-right" placeholder="00">
                                 <div class="input-group-append"><span class="input-group-text">.00</span></div>
                             </div>
                         </div>
+                        
+                        
                         <hr>
                         <div class="form-group row" >
                         	<div class="col-md-6">
@@ -71,6 +71,7 @@
                             </div>
                             <div class="col-md-6">
                             	<button type="submit" name="action" value="pay" class="btn btn-primary">Pay</button>
+                        	</div>
                         </div>
                 	</form>
               	</div>
@@ -78,4 +79,4 @@
     	</div>
 	</body>
 </html>
-                
+     
