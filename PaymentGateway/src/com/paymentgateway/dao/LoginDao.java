@@ -9,9 +9,7 @@ import java.sql.*;
 
 public class LoginDao {
 
-	public static boolean login(User user) {
-		
-		boolean result = false;
+	public static User login(User user) {
 		
 		Connection con = null;
 	    ResultSet rs = null;  
@@ -40,26 +38,21 @@ public class LoginDao {
 	         if (!more) 
 	         {
 	            System.out.println("Sorry, you are not a registered user! Please sign up first");
-	            result = false;
+	            user.setUser_id(0);
 	         } 
 		        
 	         //if user exists set the isValid variable to true
 	         else if (more) 
 	         {
 	            String Name = rs.getString("user_name");
-		     	
-	            System.out.println("Welcome " + Name);
-	            
-	            result = true;
+	            String id = rs.getString("user_id");
+		     	user.setUser_id(Integer.parseInt(id));
 	         }
 	      } 
-
 	      catch (Exception ex) 
 	      {
 	         System.out.println("Log In failed: An Exception has occurred! " + ex);
 	      } 
-		    
-	      //some exception handling
 	      finally 
 	      {
 	         if (rs != null)	{
@@ -86,7 +79,7 @@ public class LoginDao {
 	         }
 	      }
 		
-		return result;
+		return user;
 	}
 
 }

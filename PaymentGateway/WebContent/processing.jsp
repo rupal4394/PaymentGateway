@@ -14,22 +14,22 @@
 					<form  action="payment" method="post" id="paymentForm">
                     	<div class="form-group">
                         	<label for="cc_name">Card Holder's Name</label>
-                            <p class="form-control" ><%=request.getParameter("cc_name") %></p>
+                            <input class="form-control" name="cc_name" value="<%=request.getParameter("cc_name") %>" readonly>
                    		</div>
                         <div class="form-group">
                         	<label>Card Number</label>
-                            <p  class="form-control"><%=request.getParameter("cc_no") %></p>
+                            <input class="form-control" name="cc_no" value="<%=request.getParameter("cc_no") %>" readonly>
                         </div>
                         <div class="form-group row">
                         	<label class="col-md-12">Card Exp. Date</label>
                             <div class="col-md-4">
-                            	<p class="form-control" ><%=request.getParameter("cc_exp_mo") %></p>
+                            	<input class="form-control" name="cc_exp_mo" value="<%=request.getParameter("cc_exp_mo") %>" readonly>
                    			</div>
                             <div class="col-md-4">
-                            	<p class="form-control"><%=request.getParameter("cc_exp_yr") %></p>
+                            	<input class="form-control" name="cc_exp_yr" value="<%=request.getParameter("cc_exp_yr") %>" readonly>
                            	</div>
                             <div class="col-md-4">
-                            	<p class="form-control"><%=request.getParameter("cvv") %></p>
+                            	<input class="form-control" name="cvv" value="<%=request.getParameter("cvv") %>" readonly>
                        	    </div>
                     	</div>
                         <div class="row">
@@ -38,15 +38,11 @@
                         <div class="form-inline">
                         	<div class="input-group">
                             	<div class="input-group-prepend"><span class="input-group-text">$</span></div>
-                                <p class="form-control text-right"><%=request.getParameter("amount") %></p>
+                                <input class="form-control text-right" name="amount" value="<%=request.getParameter("amount") %>" readonly>
                                 <div class="input-group-append"><span class="input-group-text">.00</span></div>
                             </div>
                         </div>
                         <hr>
-                        <%
-                        
-                        
-                        %>
                         <div class="form-group row" >
                         	<div class="col-md-6">
                             	<button type="submit" name="action" value="cancel" class="btn btn-primary">Cancel</button>

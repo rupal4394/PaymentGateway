@@ -21,22 +21,21 @@ public class LoginController extends HttpServlet {
 		User user = new User();
 		user.setName(request.getParameter("userName"));
 		user.setPassword(request.getParameter("password"));
+		
 		String action = request.getParameter("action");
 		
 		if(action.equals("submit")) {
-			if (LoginDao.login(user))
+			user = LoginDao.login(user);
+			if (user.getUser_id()!=0)
 			{
 				HttpSession session = request.getSession(true);	    
-				session.setAttribute("currentSessionUser",user); 
-				
-				RSA.generateKeyPair();
-				session.setAttribute("publicKey", RSA.getPubKey());			
+				session.setAttribute("currentSessionUser",user); 		
 				
 				response.sendRedirect("payment.jsp");     		
 			}
 			else {
 				request.setAttribute("errorMessage", "Invalid user or password");
-				request.getRequestDispatcher("login.jsp").forward(request, response);
+				request.getRequestDispatcher("loginError.jsp").forward(request, response);
 			}
 				
 		}else if(action.equals("reset")) {

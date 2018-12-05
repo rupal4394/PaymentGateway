@@ -19,7 +19,7 @@
                    		</div>
                         <div class="form-group">
                         	<label>Card Number</label>
-                            <input type="text" class="form-control" name="cc_no" autocomplete="off" title="Credit card number" >
+                            <input type="text" class="form-control" name="cc_no" autocomplete="off" autocomplete="off" minlength="16" maxlength="16" pattern="\d{16}" title="Credit card number" >
                         </div>
                         <div class="form-group row">
                         	<label class="col-md-12">Card Exp. Date</label>
